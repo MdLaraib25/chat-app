@@ -1,8 +1,19 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Login from './pages/Login/Login'
+import { ChatSession } from 'firebase/ai'
+import Chat from './pages/Chat/Chat'
+import ProfileUpdate from './pages/ProfileUpdate/ProfileUpdate'
 
 const App = () => {
   return (
-    <h1 className="text-3xl font-bold text-red-500">hy</h1>
+    <>
+    <Routes>
+      <Route path='/' element = {<Login />} />
+      <Route path='/chat' element = {<Chat />} />
+      <Route path='/profile' element = {<ProfileUpdate />} />
+    </Routes>
+    </>
 
   )
 }
